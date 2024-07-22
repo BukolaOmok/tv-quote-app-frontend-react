@@ -33,7 +33,10 @@ const addQuote = async () => {
             author: newAuthor,
             show: newShowName,
         });
-        fetchTVQuotes(); // Refresh list after adding
+        fetchTVQuotes(); 
+        setNewText("");
+        setNewAuthor("");
+        setNewShowName("")
     } catch (error) {
         console.error("Failed to add the quote:", error);
     }
